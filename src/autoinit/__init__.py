@@ -17,7 +17,7 @@ Related Modules:
 - filelock: File-based locking for node markers
 """
 
-__version__ = '0.1.0'
+__version__ = '2601141830'
 
 from autoinit.mixins import AutoInitMixin
 

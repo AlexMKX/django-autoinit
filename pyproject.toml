@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "django-autoinit"
-version = "0.1.0"
+version = "2601141830"
 description = "Two-phase initialization for Django containers: infrastructure (cluster-wide) and node (per-container) init with distributed locking"
 readme = "README.md"
 license = "MIT"
