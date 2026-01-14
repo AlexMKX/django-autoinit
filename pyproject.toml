@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "django-autoinit"
+version = "0.1.0"
+description = "Two-phase initialization for Django containers: infrastructure (cluster-wide) and node (per-container) init with distributed locking"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [
+    { name = "GFI Team" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["django", "initialization", "distributed-lock", "container", "kubernetes"]
+dependencies = [
+    "django>=5.0",
+    "django-pglock>=1.6",
+    "filelock>=3.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-django",
+]
+
+[project.urls]
+Homepage = "https://github.com/AlexMKX/django-autoinit"
+Documentation = "https://github.com/AlexMKX/django-autoinit/tree/main/docs"
+Repository = "https://github.com/AlexMKX/django-autoinit"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/autoinit"]
